@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Grapher</title>
+  </head>
+  <body>
+	  	<svg id="svg" style="width: 1000px; height: 800px;">
+		</svg>
+  </body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="graph.js"></script>
+  <script type="text/javascript">
+  	let svg_element = document.getElementById("svg");
+  	let graph_object = graph(svg_element, 50, 20, 15);
+
+  	let nodes = [{"id":1, "some":"payload"}, {"id":2, "some":"payload"}, {"id":3, "some":"payload"}, {"id":4, "some":"payload"}, {"id":5, "some":"payload"},];
+  	let links = [{"from":1, "to":2}, {"from":1, "to":3}, {"from":4, "to":5}, {"from":3, "to":2}, {"from":3, "to":4}]
+	graph_object.sync(nodes, links);
+
+  </script>
+
+
+</html>
+
