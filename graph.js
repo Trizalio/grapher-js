@@ -133,10 +133,12 @@ function node_dragended(d) {
       // .style("stroke-width", function(d) { return 2 + d.current * 3; })
       // .style("stroke", function(d) { if(d.passed) {return "#5C5";}return "#777"; })
       .enter().append("line")
-        .style("stroke", "#5C5")//function(d) { if(d.passed) {return "#5C5";}return "#777"; })
+        .style("stroke", "#000")//function(d) { if(d.passed) {return "#5C5";}return "#777"; })
+        .style("stroke-opacity", 0.7)
         .style("stroke-width", 2)
         .style("stroke-dashoffset", -node_radius)
         .style("stroke-dasharray", 0)
+        .style("marker-end", 'url(#head)')
         // .style("stroke-width", function(d) { return 2 + d.current * 3; });
     // links_actual._groups[0] = links_actual._groups[0].concat(link._groups[0]);
     .merge(link);
